@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEB_HOST_MULTIARCH
+DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+VER=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+              | sed -rne 's,^Version: ([^-]+).*,\1,p')
+GITREV=$(shell echo $(VER) | sed -rne 's,[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\.(),\1,p')
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DLIB_SUFFIX=/$(DEB_HOST_MULTIARCH) -DCMAKE_BUILD_TYPE="Release"
+
+override_dh_install:
+	rm -f debian/tmp/usr/lib/python2.7/dist-packages/gnuradio/iqbalance/*.pyc
+	rm -f debian/tmp/usr/lib/python2.7/dist-packages/gnuradio/iqbalance/*.pyo
+	dh_install
+
+get-orig-source:
+	git clone git://git.osmocom.org/gr-iqbal
+	cd gr-iqbal && git archive --format=tar --prefix=gr-iqbal-$(VER)/  $(GITREV) | gzip > ../gr-iqbal_$(VER).orig.tar.gz
+	rm -rf gr-iqbal
+	git clone git://git.osmocom.org/libosmo-dsp
+	cd libosmo-dsp && git archive --format=tar --prefix=libosmo-dsp-59e29c/ 59e29c | gzip > ../gr-iqbal_$(VER).orig-libosmo-dsp.tar.gz
+	rm -rf libosmo-dsp/.git

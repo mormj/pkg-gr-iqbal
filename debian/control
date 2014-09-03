@@ -1,0 +1,42 @@
+Source: gr-iqbal
+Section: libs
+Priority: extra
+Maintainer: A. Maitland Bottoms <bottoms@debian.org>
+Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>>3.7.4), libboost-dev,
+ libboost-system-dev, libboost-test-dev, libfftw3-dev, liblog4cpp5-dev, swig,
+ python-dev, python-numpy, doxygen
+Standards-Version: 3.9.5
+Homepage: http://cgit.osmocom.org/cgit/gr-iqbal/
+Vcs-Git: git://anonscm.debian.org/users/bottoms/pkg-gr-iqbal.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/bottoms/pkg-gr-iqbal.git;a=summary
+
+Package: gr-iqbal
+Section: libdevel
+Architecture: any
+Pre-Depends: multiarch-support, ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgnuradio-iqbalance0 (=${binary:Version})
+Description: GNU Radio Blind IQ imbalance estimator and correction
+ The general idea is to suppress symmetrical images caused by IQ
+ imbalance in the RX path of quadrature receivers.
+ It's composed of two subblocks:
+ .
+ "IQ Bal Fix": This applies the actual correction. to a complex
+ stream. The correction parameters are only magnitude/phase and the
+ actual correction algo is the same as applied in hardware in the USRP.
+ You can either specify the correction parameters manually on the
+ block, or send them via 'messages'.
+ .
+ "IQ Bal Optimize": This blocks tries to blindly detect the imbalance
+ by minimizing the correlation between the left and right part of the
+ spectrum. See the code for the "how it does it". The general idea is
+ inspired from papers found on the internet and the way some SDR
+ software achieve the same things (sdr# for eg, although there are
+ significant differences in the actual implementation).
+
+Package: libgnuradio-iqbalance0
+Architecture: any
+Pre-Depends: multiarch-support
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: gr-iqbal
+Description: GNU Radio Blind IQ imbalance estimator and correction
+ This package provides a shared library for gr-iqbal.

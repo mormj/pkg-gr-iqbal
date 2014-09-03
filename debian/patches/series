@@ -1,0 +1,4 @@
+0001-python-Remove-an-old-workaround-for-a-swig-bug.patch
+0002-build-CMake-updates.patch
+cmake2.8
+debian-soname

@@ -1,0 +1,4 @@
+usr/include
+usr/share/gnuradio
+/usr/lib/*/libgnuradio-iqbalance.so
+usr/lib/python*

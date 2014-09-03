@@ -1,0 +1,11 @@
+--- a/lib/CMakeLists.txt
++++ b/lib/CMakeLists.txt
+@@ -29,6 +29,8 @@
+ )
+ 
+ add_library(gnuradio-iqbalance SHARED ${iqbalance_sources} ${LIBOSMODSP_SOURCES})
++set_target_properties(gnuradio-iqbalance PROPERTIES OUTPUT_NAME gnuradio-iqbalance)
++set_target_properties(gnuradio-iqbalance PROPERTIES SOVERSION 0 VERSION 0.0.0)
+ target_link_libraries(gnuradio-iqbalance ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES} ${LIBOSMODSP_LIBRARIES})
+ set_target_properties(gnuradio-iqbalance PROPERTIES DEFINE_SYMBOL "gnuradio_iqbalance_EXPORTS")
+ 

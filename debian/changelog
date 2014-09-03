@@ -1,0 +1,39 @@
+gr-iqbal (0.37.2-1) unstable; urgency=low
+
+  * New upstream tag, update to v0.37.2-2-g44ab02f
+  * build with gnuradio 3.7.5
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 03 Sep 2014 00:51:53 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-3) unstable; urgency=low
+
+  * rebuild with gnuradio 3.7.4
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 27 Aug 2014 01:06:34 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-2) unstable; urgency=low
+
+  * reduce boost dependencies to system and test components
+  * add doxygen and python dependencies
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 18 Apr 2014 19:15:33 -0400
+
+gr-iqbal (0.37.1.5.d4fd4d-1~bpo70+1) wheezy-backports; urgency=low
+
+  * Rebuild for wheezy-backports.
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 01 Feb 2014 21:28:26 -0500
+
+gr-iqbal (0.37.1.5.d4fd4d-1) unstable; urgency=low
+
+  * latest upstream commit, use with gnuradio 3.7.2.1
+    uses libosmo-dsp commit 59e29c
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 29 Dec 2013 10:56:16 -0500
+
+gr-iqbal (0.37.1.4.a1bca1f9-1) unstable; urgency=low
+
+  * New upstream snapshot (Closes: #725843).
+  * Match GNU Radio live distribution version
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 28 Sep 2013 22:55:08 -0400
