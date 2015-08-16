@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-2) unstable; urgency=low
+
+  * build with gnuradio 3.7.8
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 15 Aug 2015 22:18:22 -0400
+
 gr-iqbal (0.37.2-1) unstable; urgency=low
 
   * New upstream tag, update to v0.37.2-2-g44ab02f

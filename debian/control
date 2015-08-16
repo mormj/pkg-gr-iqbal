@@ -5,10 +5,10 @@ Maintainer: A. Maitland Bottoms <bottoms@debian.org>
 Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>>3.7.4), libboost-dev,
  libboost-system-dev, libboost-test-dev, libfftw3-dev, liblog4cpp5-dev, swig,
  python-dev, python-numpy, doxygen
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://cgit.osmocom.org/cgit/gr-iqbal/
 Vcs-Git: git://anonscm.debian.org/users/bottoms/pkg-gr-iqbal.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/bottoms/pkg-gr-iqbal.git;a=summary
+Vcs-Browser: http://anonscm.debian.org/cgit/users/bottoms/pkg-gr-iqbal.git/
 
 Package: gr-iqbal
 Section: libdevel
