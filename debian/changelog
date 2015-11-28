@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-3) unstable; urgency=medium
+
+  * Lintian packaging cleanups
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 27 Nov 2015 20:40:26 -0500
+
 gr-iqbal (0.37.2-2) unstable; urgency=low
 
   * build with gnuradio 3.7.8

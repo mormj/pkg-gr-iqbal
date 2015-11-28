@@ -17,7 +17,7 @@ License: GPL-3+
 
 Files: COPYING
 Copyright: 2007 Free Software Foundation, Inc. <http://fsf.org/>
-License:
+License: FSF-COPYING
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
  .
@@ -26,7 +26,7 @@ License:
 
 Files: libosmo-dsp/COPYING
 Copyright: 1989, 1991 Free Software Foundation, Inc.,
-License:
+License: FSF-COPYING
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
  .
@@ -36,7 +36,7 @@ License:
 Files: cmake/Modules/CMakeParseArgumentsCopy.cmake
 Copyright: 2010 Alexander Neundorf <neundorf@kde.org>
 Comment: copy of CMakeParseArguments.cmake from cmake 2.8.x
-License:
+License: Kitware-BSD
  All rights reserved.
  .
  Redistribution and use in source and binary forms, with or without
@@ -95,20 +95,6 @@ License: GPL-3+
 Files: * not listed above
 Copyright: 2011-2013 Sylvain Munaut <tnt@246tNt.com>
 License: GPL-3+
- This is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 3, or (at your option)
- any later version.
- .
- This software is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this software; see the file COPYING.  If not, write to
- the Free Software Foundation, Inc., 51 Franklin Street,
- Boston, MA 02110-1301, USA.
 
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
