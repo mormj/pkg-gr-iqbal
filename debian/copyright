@@ -18,20 +18,10 @@ License: GPL-3+
 Files: COPYING
 Copyright: 2007 Free Software Foundation, Inc. <http://fsf.org/>
 License: FSF-COPYING
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
- .
- On Debian systems, the complete text of the GNU General
- Public License can be found in "/usr/share/common-licenses/LGPL-3".
 
 Files: libosmo-dsp/COPYING
 Copyright: 1989, 1991 Free Software Foundation, Inc.,
 License: FSF-COPYING
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-2".
 
 Files: cmake/Modules/CMakeParseArgumentsCopy.cmake
 Copyright: 2010 Alexander Neundorf <neundorf@kde.org>
@@ -95,6 +85,16 @@ License: GPL-3+
 Files: * not listed above
 Copyright: 2011-2013 Sylvain Munaut <tnt@246tNt.com>
 License: GPL-3+
+
+License: FSF-COPYING
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in "/usr/share/common-licenses/LGPL-3".
 
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify

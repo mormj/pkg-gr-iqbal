@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-4) unstable; urgency=medium
+
+  * de-duplicate copyright entries
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 28 Nov 2015 22:29:28 -0500
+
 gr-iqbal (0.37.2-3) unstable; urgency=medium
 
   * Lintian packaging cleanups
