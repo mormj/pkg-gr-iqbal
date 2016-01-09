@@ -2,7 +2,7 @@ Source: gr-iqbal
 Section: libs
 Priority: extra
 Maintainer: A. Maitland Bottoms <bottoms@debian.org>
-Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>>3.7.4), libboost-dev,
+Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>>3.7.8), libboost-dev,
  libboost-system-dev, libboost-test-dev, libfftw3-dev, liblog4cpp5-dev, swig,
  python-dev, python-numpy, doxygen
 Standards-Version: 3.9.6

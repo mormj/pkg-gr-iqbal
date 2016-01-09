@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-5) unstable; urgency=medium
+
+  * build with gnuradio 3.7.9
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 09 Jan 2016 11:10:28 -0500
+
 gr-iqbal (0.37.2-4) unstable; urgency=medium
 
   * de-duplicate copyright entries
