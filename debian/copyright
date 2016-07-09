@@ -61,7 +61,7 @@ Files: libosmo-dsp/git-version-gen
 Copyright: 2007-2010 Free Software Foundation, Inc.
 License: GPL-3+
 
-Files: libosmo-dsp/* not listed above
+Files: libosmo-dsp/*
 Copyright: 2011,2013 Sylvain Munaut <tnt@246tNt.com>
 License: GPL-2+
 
@@ -82,7 +82,7 @@ Files: debian/*
 Copyright: 2013 A. Maitland Bottoms <bottoms@debian.org>
 License: GPL-3+
 
-Files: * not listed above
+Files: *
 Copyright: 2011-2013 Sylvain Munaut <tnt@246tNt.com>
 License: GPL-3+
 
