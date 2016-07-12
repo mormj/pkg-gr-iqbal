@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-7) unstable; urgency=medium
+
+  * Breaks/Replaces older library packages (Closes: #830755, #830786)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Mon, 11 Jul 2016 22:05:02 -0400
+
 gr-iqbal (0.37.2-6) unstable; urgency=medium
 
   * update to v0.37.2-3-gdcd73fd
