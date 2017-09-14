@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-8) unstable; urgency=medium
+
+  * build with gnuradio 3.7.11
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 03 Sep 2017 23:41:06 -0400
+
 gr-iqbal (0.37.2-7) unstable; urgency=medium
 
   * Breaks/Replaces older library packages (Closes: #830755, #830786)

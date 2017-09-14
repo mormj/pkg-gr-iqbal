@@ -2,10 +2,10 @@ Source: gr-iqbal
 Section: libs
 Priority: extra
 Maintainer: A. Maitland Bottoms <bottoms@debian.org>
-Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>>3.7.9), libboost-dev,
+Build-Depends: debhelper (>= 9), cmake, pkg-config, gnuradio-dev (>=3.7.11), libboost-dev,
  libboost-system-dev, libboost-test-dev, libfftw3-dev, liblog4cpp5-dev, swig,
  python-dev, python-numpy, doxygen
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: http://cgit.osmocom.org/cgit/gr-iqbal/
 Vcs-Git: https://anonscm.debian.org/git/users/bottoms/pkg-gr-iqbal.git
 Vcs-Browser: https://anonscm.debian.org/cgit/users/bottoms/pkg-gr-iqbal.git/
@@ -14,7 +14,7 @@ Package: gr-iqbal
 Section: libdevel
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgnuradio-iqbalance3.7.10 (=${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgnuradio-iqbalance3.7.11 (=${binary:Version})
 Description: GNU Radio Blind IQ imbalance estimator and correction
  The general idea is to suppress symmetrical images caused by IQ
  imbalance in the RX path of quadrature receivers.
@@ -33,7 +33,7 @@ Description: GNU Radio Blind IQ imbalance estimator and correction
  software achieve the same things (sdr# for eg, although there are
  significant differences in the actual implementation).
 
-Package: libgnuradio-iqbalance3.7.10
+Package: libgnuradio-iqbalance3.7.11
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
