@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-10) unstable; urgency=medium
+
+  * Add conflicts/replaces lines (Closes: #875787)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 16 Sep 2017 03:53:56 -0400
+
 gr-iqbal (0.37.2-9) unstable; urgency=medium
 
   * install .pc file correctly (Closes: #875787)
