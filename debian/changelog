@@ -1,3 +1,9 @@
+gr-iqbal (0.37.2-11) unstable; urgency=medium
+
+  * Fix conflicts/replaces lines - thanks anbe (Closes: #880906)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 14 Nov 2017 23:44:07 -0500
+
 gr-iqbal (0.37.2-10) unstable; urgency=medium
 
   * Add conflicts/replaces lines (Closes: #875787)

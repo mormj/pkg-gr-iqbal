@@ -15,8 +15,8 @@ Section: libdevel
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgnuradio-iqbalance3.7.11 (=${binary:Version})
-Breaks:   libgnuradio-iqbalance3.7.10 (<< 0.37.2-7), libgnuradio-iqbalance3.7.11 (<< 0.37.2-8)
-Replaces: libgnuradio-iqbalance3.7.10 (<< 0.37.3-7), libgnuradio-iqbalance3.7.11 (<< 0.37.2-8)
+Breaks:   libgnuradio-iqbalance3.7.10 (<< 0.37.2-8), libgnuradio-iqbalance3.7.11 (<< 0.37.2-9)
+Replaces: libgnuradio-iqbalance3.7.10 (<< 0.37.2-8), libgnuradio-iqbalance3.7.11 (<< 0.37.2-9)
 Description: GNU Radio Blind IQ imbalance estimator and correction
  The general idea is to suppress symmetrical images caused by IQ
  imbalance in the RX path of quadrature receivers.
