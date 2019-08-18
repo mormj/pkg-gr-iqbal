@@ -1,3 +1,9 @@
+gr-iqbal (0.38-1) experimental; urgency=medium
+
+  * New for gnuradio 3.8
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 16 Aug 2019 21:26:28 -0400
+
 gr-iqbal (0.37.2-11) unstable; urgency=medium
 
   * Fix conflicts/replaces lines - thanks anbe (Closes: #880906)

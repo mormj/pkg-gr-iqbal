@@ -1,4 +1,4 @@
-From: A. MAitland Bottoms <bottoms@debian.org>
+From: A. Maitland Bottoms <bottoms@debian.org>
 Subject: debian soname
 
 Make soname match packaged gnuradio.
@@ -10,7 +10,7 @@ Make soname match packaged gnuradio.
  
  add_library(gnuradio-iqbalance SHARED ${iqbalance_sources} ${LIBOSMODSP_SOURCES})
 +set_target_properties(gnuradio-iqbalance PROPERTIES OUTPUT_NAME gnuradio-iqbalance)
-+set_target_properties(gnuradio-iqbalance PROPERTIES SOVERSION 3.7.11 VERSION 3.7.11)
++set_target_properties(gnuradio-iqbalance PROPERTIES SOVERSION 3.8.0 VERSION 3.8.0)
  target_link_libraries(gnuradio-iqbalance ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES} ${LIBOSMODSP_LIBRARIES})
  set_target_properties(gnuradio-iqbalance PROPERTIES DEFINE_SYMBOL "gnuradio_iqbalance_EXPORTS")
  
