@@ -1,0 +1,204 @@
+From b41f8d33b6e568191cf258a5ca7fad6c25f5b8aa Mon Sep 17 00:00:00 2001
+From: "A. Maitland Bottoms" <bottoms@debian.org>
+Date: Sun, 25 Aug 2019 19:50:52 -0400
+Subject: [PATCH 1/4] convert blocks from xml to yml
+
+---
+ grc/CMakeLists.txt                 |  5 ++--
+ grc/iqbalance.tree.yml             |  4 +++
+ grc/iqbalance_fix_cc.block.yml     | 43 ++++++++++++++++++++++++++++++
+ grc/iqbalance_fix_cc.xml           | 33 -----------------------
+ grc/iqbalance_optimize_c.block.yml | 34 +++++++++++++++++++++++
+ grc/iqbalance_optimize_c.xml       | 23 ----------------
+ 6 files changed, 84 insertions(+), 58 deletions(-)
+ create mode 100644 grc/iqbalance.tree.yml
+ create mode 100644 grc/iqbalance_fix_cc.block.yml
+ delete mode 100644 grc/iqbalance_fix_cc.xml
+ create mode 100644 grc/iqbalance_optimize_c.block.yml
+ delete mode 100644 grc/iqbalance_optimize_c.xml
+
+diff --git a/grc/CMakeLists.txt b/grc/CMakeLists.txt
+index 31f74ec..158709e 100644
+--- a/grc/CMakeLists.txt
++++ b/grc/CMakeLists.txt
+@@ -17,7 +17,8 @@
+ # the Free Software Foundation, Inc., 51 Franklin Street,
+ # Boston, MA 02110-1301, USA.
+ install(FILES
+-    iqbalance_fix_cc.xml
+-    iqbalance_optimize_c.xml
++    iqbalance_fix_cc.block.yml
++    iqbalance_optimize_c.block.yml
++    iqbalance.tree.yml
+     DESTINATION share/gnuradio/grc/blocks
+ )
+diff --git a/grc/iqbalance.tree.yml b/grc/iqbalance.tree.yml
+new file mode 100644
+index 0000000..dba28f3
+--- /dev/null
++++ b/grc/iqbalance.tree.yml
+@@ -0,0 +1,4 @@
++'[Core]':
++-   IQ Balance:
++    - iqbalance_fix_cc
++    - iqbalance_optimize_c
+diff --git a/grc/iqbalance_fix_cc.block.yml b/grc/iqbalance_fix_cc.block.yml
+new file mode 100644
+index 0000000..1f5511c
+--- /dev/null
++++ b/grc/iqbalance_fix_cc.block.yml
+@@ -0,0 +1,43 @@
++id: iqbalance_fix_cc
++label: IQ Bal Fix
++flags: [ python, cpp ]
++
++parameters:
++-   id: mag
++    label: Magnitude
++    dtype: real
++-   id: phase
++    label: Phase
++    dtype: real
++
++inputs:
++-   domain: stream
++    id: in
++    dtype: complex
++-   domain: message
++    id: iqbal_corr
++    dtype: complex
++    optional: true
++
++outputs:
++-   domain: stream
++    id: out
++    dtype: complex
++
++templates:
++    imports: from gnuradio import iqbalance
++    make: iqbalance.fix_cc(${mag}, ${phase})
++    callbacks:
++    - set_mag(${mag})
++    - set_phase(${phase})
++
++cpp_templates:
++    includes: ['#include <gnuradio/iqbalance.h>']
++    declarations: 'iqbalance::fix_cc::sptr ${id};'
++    make: 'this->${id} = iqbalance::fix_cc::make(${mag}, ${phase});'
++    callbacks:
++    - set_mag(${mag})
++    - set_phase(${phase})
++    link: ['gnuradio-iqbalance']
++
++file_format: 1
+diff --git a/grc/iqbalance_fix_cc.xml b/grc/iqbalance_fix_cc.xml
+deleted file mode 100644
+index 34364d8..0000000
+--- a/grc/iqbalance_fix_cc.xml
++++ /dev/null
+@@ -1,33 +0,0 @@
+-<?xml version="1.0"?>
+-<block>
+-  <name>IQ Bal Fix</name>
+-  <key>iqbalance_fix_cc</key>
+-  <category>IQ Balance</category>
+-  <import>from gnuradio import iqbalance</import>
+-  <make>iqbalance.fix_cc($mag, $phase)</make>
+-  <callback>set_mag($mag)</callback>
+-  <callback>set_phase($phase)</callback>
+-  <param>
+-    <name>Magnitude</name>
+-    <key>mag</key>
+-    <type>real</type>
+-  </param>
+-  <param>
+-    <name>Phase</name>
+-    <key>phase</key>
+-    <type>real</type>
+-  </param>
+-  <sink>
+-    <name>in</name>
+-    <type>complex</type>
+-  </sink>
+-  <sink>
+-    <name>iqbal_corr</name>
+-    <type>message</type>
+-    <optional>1</optional>
+-  </sink>
+-  <source>
+-    <name>out</name>
+-    <type>complex</type>
+-  </source>
+-</block>
+diff --git a/grc/iqbalance_optimize_c.block.yml b/grc/iqbalance_optimize_c.block.yml
+new file mode 100644
+index 0000000..db9a741
+--- /dev/null
++++ b/grc/iqbalance_optimize_c.block.yml
+@@ -0,0 +1,34 @@
++id: iqbalance_optimize_c
++label: IQ Bal Optimize
++flags: [ python, cpp ]
++
++parameters:
++-   id: period
++    label: Period
++    dtype: int
++
++inputs:
++-   domain: stream
++    id: in
++    dtype: complex
++
++outputs:
++-   domain: message
++    id: iqbal_corr</name>
++    dtype: complex
++    optional: true
++
++templates:
++    imports: from gnuradio import iqbalance
++    make: iqbalance.optimize_c(${period})
++    callbacks:
++    - set_period(${period})
++cpp_templates:
++    includes: ['#include <gnuradio/iqbalance.h>']
++    declarations: 'iqbalance::optimize_c::sptr ${id};'
++    make: 'this->${id} = iqbalance::optimize_c::make(${period});'
++    callbacks:
++    - set_period(${period})
++    link: ['gnuradio-iqbalance']
++
++file_format: 1
+diff --git a/grc/iqbalance_optimize_c.xml b/grc/iqbalance_optimize_c.xml
+deleted file mode 100644
+index cb42d98..0000000
+--- a/grc/iqbalance_optimize_c.xml
++++ /dev/null
+@@ -1,23 +0,0 @@
+-<?xml version="1.0"?>
+-<block>
+-  <name>IQ Bal Optimize</name>
+-  <key>iqbalance_optimize_c</key>
+-  <category>IQ Balance</category>
+-  <import>from gnuradio import iqbalance</import>
+-  <make>iqbalance.optimize_c($period)</make>
+-  <callback>set_period($period)</callback>
+-  <param>
+-    <name>Period</name>
+-    <key>period</key>
+-    <type>int</type>
+-  </param>
+-  <sink>
+-    <name>in</name>
+-    <type>complex</type>
+-  </sink>
+-  <source>
+-    <name>iqbal_corr</name>
+-    <type>message</type>
+-    <optional>1</optional>
+-  </source>
+-</block>
+-- 
+2.20.1
+

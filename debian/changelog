@@ -1,3 +1,10 @@
+gr-iqbal (0.38-2) experimental; urgency=medium
+
+  * Fix yaml syntax
+  * sumbit patches upstream
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 25 Aug 2019 20:10:11 -0400
+
 gr-iqbal (0.38-1) experimental; urgency=medium
 
   * New for gnuradio 3.8
