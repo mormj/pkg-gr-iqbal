@@ -3,3 +3,4 @@ usr/share/gnuradio
 /usr/lib/*/libgnuradio-iqbalance.so
 /usr/lib/*/pkgconfig/gnuradio-iqbalance.pc
 usr/lib/python*
+usr/lib/*/cmake

@@ -1,3 +1,23 @@
+gr-iqbal (0.38-3) unstable; urgency=medium
+
+  * Better description and fixed link (Closes: #927253)
+  * upload to unstable
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 28 Aug 2019 18:56:08 -0400
+
+gr-iqbal (0.38-2) experimental; urgency=medium
+
+  * Fix yaml syntax
+  * sumbit patches upstream
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sun, 25 Aug 2019 20:10:11 -0400
+
+gr-iqbal (0.38-1) experimental; urgency=medium
+
+  * New for gnuradio 3.8
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Fri, 16 Aug 2019 21:26:28 -0400
+
 gr-iqbal (0.37.2-11) unstable; urgency=medium
 
   * Fix conflicts/replaces lines - thanks anbe (Closes: #880906)

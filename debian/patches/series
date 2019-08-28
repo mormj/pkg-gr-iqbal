@@ -1,5 +1,4 @@
-0001-python-Remove-an-old-workaround-for-a-swig-bug.patch
-0002-build-CMake-updates.patch
-0003-Import-MANIFEST.md-for-CGRAN-s-benefit.patch
-cmake2.8
-debian-soname
+convert-blocks-from-xml-to-yml
+convert-to-modern-cmake-gnuradio-3.8-patterns
+no-longer-need-local-copy-of-GrMiscUtils.cmake
+no-longer-need-local-copy-of-CMakeParseArgumentsCopy
