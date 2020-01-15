@@ -1,3 +1,11 @@
+gr-iqbal (0.38-4) unstable; urgency=medium
+
+  * depend upon dh-python since python3-dev no longer does (Closes: #948938)
+    thanks peter!
+  * also add depends on liborc-0.4-dev
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 14 Jan 2020 23:26:33 -0500
+
 gr-iqbal (0.38-3) unstable; urgency=medium
 
   * Better description and fixed link (Closes: #927253)
