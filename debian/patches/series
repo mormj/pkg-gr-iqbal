@@ -1,4 +1,4 @@
-convert-blocks-from-xml-to-yml
-convert-to-modern-cmake-gnuradio-3.8-patterns
-no-longer-need-local-copy-of-GrMiscUtils.cmake
-no-longer-need-local-copy-of-CMakeParseArgumentsCopy
+#convert-blocks-from-xml-to-yml
+#convert-to-modern-cmake-gnuradio-3.8-patterns
+#no-longer-need-local-copy-of-GrMiscUtils.cmake
+#no-longer-need-local-copy-of-CMakeParseArgumentsCopy
