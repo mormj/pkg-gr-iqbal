@@ -23,6 +23,7 @@ Build-Depends: cmake,
                python3-dev,
                python3-numpy,
                swig
+               python3-six
 Standards-Version: 4.4.0
 Homepage: https://git.osmocom.org/gr-iqbal
 Vcs-Browser: https://salsa.debian.org/bottoms/pkg-gr-iqbal
