@@ -1,5 +1,5 @@
 /usr/lib/*/libgnuradio-iqbalance.so
-/usr/lib/*/pkgconfig/gnuradio-iqbalance.pc
+# /usr/lib/*/pkgconfig/gnuradio-iqbalance.pc
 usr/include
 usr/lib/*/cmake
 usr/lib/python*
